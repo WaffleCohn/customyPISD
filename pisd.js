@@ -27,3 +27,13 @@ function addTab(html)
 {
 
 }
+
+function changeTheme(color)
+{
+  // confirm it is hex
+}
+
+function addThemeChanger()
+{
+  
+}
