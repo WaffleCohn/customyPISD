@@ -8,7 +8,7 @@ function requestGrades()
 
 function changeName(name)
 {
-	var studentName = document.getElementById("content").getElementsByClassName("page-title")[0].getElementsByClassName("span")[0];
+	var studentName = document.getElementById("content").getElementsByClassName("page-title")[0].getElementsByTagName("span")[0];
 
 	studentName.innerHTML = name;
 }
