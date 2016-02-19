@@ -4,7 +4,7 @@ A collection of methods for modifying your personal myPISD page (for Plano ISD s
 ## Setup
 Log into your mypisd account (portal.mypisd.net). Scroll your mouse over the gear icon at the top of the page and click on the "Page" tab. This opens a box titled "Manage Page." Click on the "JavaScript" link on the right side of the page in the navigation column. Finally copy and paste the following code into the JavaScript text field:
 ```
-var script = document.createElements("script");
+var script = document.createElement("script");
 script.type = "text/javascript";
 script.src = "http://wafflecohn.github.io/customyPISD/pisd.js";
 document.body.appendChild(script);
@@ -16,7 +16,7 @@ To modify your page, call any of the following available functions. If you don't
 
 Every time you log in, receive a notification asking to navigate to the gradebook
 ```
-requestGrade();
+requestGrades();
 ```
 
 Change the name displayed in the page header
