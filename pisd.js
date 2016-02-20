@@ -60,7 +60,7 @@ function loadProfile()
 			openFile.style = "visibility:hidden";
 			openFile.id = "openImage";
 			openFile.multiple = false;
-			document.appendChild(openFile);
+			document.body.appendChild(openFile);
 			
 			//Load image
 			if (localStorage.prof) {
@@ -77,9 +77,11 @@ function uploadProfile()
 {
 	var f = document.getElementById("openImage");
 	f.click();
-	var img = URL.createObjectURL(f.files[0]);
-	document.getElementById("_145_userAvatar").getElementsByTagName("img")[0].src = img;
-	localStorage.prof = img;
+	f.onchange = function() {
+		var img = URL.createObjectURL(f.files[0]);
+		document.getElementById("_145_userAvatar").getElementsByTagName("img")[0].src = img;
+		localStorage.prof = img;
+	};
 }
 
 function changeTheme(color)
