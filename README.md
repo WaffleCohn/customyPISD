@@ -8,9 +8,10 @@ var script = document.createElement("script");
 script.type = "text/javascript";
 script.src = "http://wafflecohn.github.io/customyPISD/pisd.js";
 document.body.appendChild(script);
+
 script.addEventListener("load", function() {
 
-  // Paste code here
+    // Paste code here
 
 });
 ```
@@ -56,10 +57,11 @@ var script = document.createElement("script");
 script.type = "text/javascript";
 script.src = "http://wafflecohn.github.io/customyPISD/pisd.js";
 document.body.appendChild(script);
+
 script.addEventListener("load", function() {
 
-  requestGrades();
+    requestGrades();
   
-  changeName("The President");
+    changeName("The President");
 
 });
