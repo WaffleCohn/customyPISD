@@ -50,8 +50,18 @@ Add a tab that navigates directly to the grade book
 addGradebookTab();
 ```
 
+Change the theme color of the page. Colors must be in the hexadecimal format (hex code) and enclosed in quotes. Ex: enter "#29B6F6" for a light blue
+```
+changeThemeColor("color");
+```
+
+Add a page tab with a color picker to more easily change the theme color of the page.
+```
+addThemeChanger();
+```
+
 ## Example Execution
-Here is the example code for enabling the gradebook notification and changing your name to "The President".
+Here is the example code for enabling the gradebook notification, changing your name to "The President", and changing the theme color to green.
 ```
 var script = document.createElement("script");
 script.type = "text/javascript";
@@ -63,5 +73,7 @@ script.addEventListener("load", function() {
     requestGrades();
   
     changeName("The President");
+
+    changeThemeColor("#2ECC71");
 
 });

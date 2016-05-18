@@ -99,7 +99,15 @@ function addThemeChanger()
 
 function changeThemeColor(color)
 {
-	// must be hex
+	// must be 6-digit hex
+	var hexRegEx = /^#[0-9a-fA-F]{6}$/;
+	
+	if (!hexRegEx.test(color))
+	{
+		console.log("Error: improper color format. Please enter a six-digit hex code such as #123456.");
+		break;
+	}
+
     var hsl = getHSL(color);
 
     var headers = document.getElementsByClassName("dr-table-subheader");
