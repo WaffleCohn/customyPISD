@@ -8,11 +8,17 @@ var script = document.createElement("script");
 script.type = "text/javascript";
 script.src = "http://wafflecohn.github.io/customyPISD/pisd.js";
 document.body.appendChild(script);
+
+script.addEventListener("load", function() {
+
+    // Paste code here
+
+});
 ```
 Click save and you've successfully "installed" customyPISD.
 
 ## Available Functions
-To modify your page, call any of the following available functions. If you don't know programming, just copy and paste the code provided. Wherever there are quotes, fill in the requested information but leave the quotes there. (ex: ```changeName("Batman");``` changes your displayed name to Batman)
+To modify your page, call any of the following available functions inside the area enclosed by brackets {} marked "Paste code here". If you don't know programming, just copy and paste the code provided. Wherever there are quotes, fill in the requested information but leave the quotes there. (ex: ```changeName("Batman");``` changes your displayed name to Batman)
 
 Every time you log in, receive a notification asking to navigate to the gradebook
 ```
@@ -43,3 +49,31 @@ Add a tab that navigates directly to the grade book
 ```
 addGradebookTab();
 ```
+
+Change the theme color of the page. Colors must be in the hexadecimal format (hex code) and enclosed in quotes. Ex: enter "#29B6F6" for a light blue
+```
+changeThemeColor("color");
+```
+
+Add a page tab with a color picker to more easily change the theme color of the page.
+```
+addThemeChanger();
+```
+
+## Example Execution
+Here is the example code for enabling the gradebook notification, changing your name to "The President", and changing the theme color to green.
+```
+var script = document.createElement("script");
+script.type = "text/javascript";
+script.src = "http://wafflecohn.github.io/customyPISD/pisd.js";
+document.body.appendChild(script);
+
+script.addEventListener("load", function() {
+
+    requestGrades();
+  
+    changeName("The President");
+
+    changeThemeColor("#2ECC71");
+
+});
