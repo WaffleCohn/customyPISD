@@ -105,7 +105,7 @@ function changeThemeColor(color)
 	if (!hexRegEx.test(color))
 	{
 		console.log("Error: improper color format. Please enter a six-digit hex code such as #123456.");
-		break;
+		return;
 	}
 
     var hsl = getHSL(color);
